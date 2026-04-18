@@ -1,0 +1,263 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= VARIABLES DE COLOR ================= */
+:root {
+  --color-principal: #1a2426;
+  --color-secundario: #2b4316;
+  --color-acento: #8dba36;
+  --color-texto: #ffffff;
+  --color-fondo: #0f1718;
+}
+
+/* ================= BASE ================= */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+  padding-top: 80px;
+}
+
+/* ================= HEADER ================= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: transparent;
+  transition: 0.3s;
+}
+
+header.scrolled {
+  background: rgba(26, 36, 38, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+header h1 {
+  color: var(--color-acento);
+}
+
+/* ================= NAV ================= */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: var(--color-texto);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+section a {
+  color: #4aa3ff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover,
+section a:hover {
+  color: var(--color-acento);
+}
+
+/* ================= HERO ================= */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    var(--color-principal),
+    var(--color-secundario)
+  );
+}
+
+.hero img {
+  margin-top: 15px;
+  border-radius: 50%;
+  border: 3px solid var(--color-acento);
+}
+
+/* ================= SECCIONES ================= */
+section {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 30px;
+  background: var(--color-principal);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+section h2 {
+  color: var(--color-acento);
+  margin-bottom: 10px;
+}
+
+/* ================= LISTAS ================= */
+ul li,
+ol li {
+  margin: 8px 0;
+}
+
+/* ================= TARJETAS ================= */
+.tarjetas-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tarjeta {
+  flex: 1 1 280px;
+  max-width: 300px;
+  background: var(--color-secundario);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--color-acento);
+  transition: 0.3s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(141, 186, 54, 0.4);
+}
+
+/* ================= BOTONES ================= */
+.btn {
+  display: inline-block;
+  background: var(--color-acento);
+  color: #000;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* HOVER */
+.btn:hover {
+  background: #a6d94a;
+  color: #2a3715;
+}
+
+/* ================= FORMULARIO ================= */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  max-width: 420px; /* ← limita el ancho máximo */
+  padding: 8px 12px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #555;
+  background: #111;
+  color: white;
+  font-size: 0.88rem; /* ← texto un poco más pequeño */
+  display: block;
+}
+
+/* checkboxes y radios no se tocan */
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: 6px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--color-acento);
+  outline: none;
+}
+
+button {
+  margin-top: 15px;
+  padding: 8px 20px; /* ← botones más compactos */
+  margin-right: 8px;
+  border: none;
+  background: var(--color-acento);
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #a6d94a;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-principal);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* ================= LOGO + NOMBRE ================= */
+.logo-nombre {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* LOGO */
+.logo {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--color-acento);
+}
+
+/* NOMBRE */
+.logo-nombre h1 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--color-acento);
+  white-space: nowrap;
+}
+
+/* ================= FIELDSET ================= */
+fieldset {
+  border: 1px solid var(--color-acento);
+  border-radius: 8px;
+  padding: 20px 25px;
+  max-width: 480px; /* ← limita el ancho del recuadro */
+  margin: 0 auto; /* ← lo centra */
+}
+
+legend {
+  color: var(--color-acento);
+  font-weight: bold;
+  padding: 0 8px;
+  font-size: 0.95rem;
+}
+
+label[for="mensaje"] {
+  display: block;
+  margin-top: 10px;
+}

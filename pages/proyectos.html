@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../img/perfil.png" type="image/png" />
+    <title>Proyectos</title>
+    <link rel="stylesheet" href="../css/estilos.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="logo-nombre">
+        <a href="../index.html">
+          <img src="../img/perfil.png" alt="Logo" class="logo" />
+        </a>
+
+        <h1>Mis Proyectos</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
+          <li><a href="../index.html#habilidades">Habilidades</a></li>
+          <li><a href="../pages/contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <section>
+        <h2>Proyectos Destacados</h2>
+
+        <div class="tarjetas-grid">
+          <!-- PROYECTO 1 -->
+          <article class="tarjeta">
+            <img src="../img/proyecto1.png" alt="Proyecto 1" width="100%" />
+            <h3>Sitio Web AC Tenorio Real Estate</h3>
+            <p>
+              Diseño de una página web moderna para una empresa de bienes
+              raíces.
+            </p>
+            <a
+              href="https://actenoriorealestate.com/"
+              class="btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Ver Proyecto</a
+            >
+          </article>
+
+          <!-- PROYECTO 2 -->
+          <article class="tarjeta">
+            <img src="../img/proyecto2.png" alt="Proyecto 2" width="100%" />
+            <h3>Sitio Web Cervecería Colors Brewing</h3>
+            <p>
+              Diseño de una página web moderna para una cervecería artesanal.
+            </p>
+            <a href="#" class="btn">Ver Proyecto</a>
+          </article>
+
+          <!-- PROYECTO 3 -->
+          <article class="tarjeta">
+            <img src="../img/proyecto3.png" alt="Proyecto 3" width="100%" />
+            <h3>Portafolio Personal</h3>
+            <p>
+              Mi propio portafolio web desarrollado con HTML, CSS y diseño
+              responsive.
+            </p>
+            <a href="#" class="btn">Ver Proyecto</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2026 Gabriel Murillo</p>
+    </footer>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+    </script>
+  </body>
+</html>

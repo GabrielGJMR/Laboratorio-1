@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/perfil.png" type="image/png" />
+    <title>Portafolio "Gabriel Murillo"</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="logo-nombre">
+        <a href="index.html">
+          <img src="img/perfil.png" alt="Logo" class="logo" />
+        </a>
+        <h1>Gabriel Murillo</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="pages/proyectos.html">Proyectos</a></li>
+          <li><a href="pages/contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <!-- INICIO -->
+      <section id="inicio" class="hero">
+        <h2>Bienvenido</h2>
+        <p>
+          Soy estudiante de <strong>Ingeniería en Sistemas</strong> y me
+          apasiona el desarrollo web.
+        </p>
+        <img src="img/perfil.png" alt="Foto de perfil" width="200" />
+      </section>
+
+      <!-- SOBRE MI -->
+      <section id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <p>
+          Me gusta crear páginas web modernas usando
+          <em>HTML, CSS y JavaScript</em>. Siempre busco aprender cosas nuevas y
+          mejorar mis habilidades en programación.
+        </p>
+
+        <!-- ENLACE EXTERNO -->
+        <p>
+          Visita mi repositorio en
+          <a href="https://github.com" target="_blank">GitHub</a>
+        </p>
+      </section>
+
+      <!-- HABILIDADES -->
+      <section id="habilidades">
+        <h2>Habilidades</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Java</li>
+          <li>MySQL</li>
+          <li>Entre Otros</li>
+        </ul>
+      </section>
+
+      <!-- PROYECTOS -->
+      <section id="proyectos">
+        <h2>Proyectos</h2>
+        <ol>
+          <li>Sitio web de AC Tenorio Real Estate</li>
+          <li>Sitio web de Colors Brewing</li>
+          <li>Portafolio personal</li>
+        </ol>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2026 Gabriel Murillo</p>
+    </footer>
+
+    <script>
+      const header = document.querySelector("header");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+    </script>
+  </body>
+</html>
